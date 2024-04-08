@@ -15,7 +15,6 @@ code {
 /* header */
 header {
   display: flex;
-  flex-direction: row-reverse;
   border-bottom: 1px solid #f2f2f2;
   min-height: 40px; 
   /* 
@@ -27,6 +26,12 @@ header {
   align-items: center;
   justify-content: space-between;
   padding: 10px 40px;
+}
+
+header .header__logo {
+  color: black;
+  font-size: 18px;
+  font-weight: 600;
 }
 
 header a {
@@ -81,8 +86,8 @@ footer a:focus{
   color: black;
 }
 
-/* post list */
-.post__list {
+/* post list, post detail */
+.post__list, .post__detail {
   min-height: 90vh;
   /* 
     view port 90%를 주는 구나... 
@@ -152,4 +157,75 @@ footer a:focus{
 .post__edit:hover,
 .post__edit:focus{
   color:black;
+}
+
+/* post detail */
+.post__detail .post__title {
+  font-size: 36px;
+  line-height: 40px;
+}
+
+.post__detail .post__utils-box {
+  padding: 10px 0;
+  /* padding을 먼저 줌으로써 전체적인 윤곽을 잡는 것이다
+    다른 레이아웃(line-height나 반응형을 위한 min-height)보다 먼저 패딩을 주자
+  */
+  border-top: 1px solid #f2f2f2;
+  border-bottom: 1px solid #f2f2f2;
+  flex-direction: row;
+}
+
+.post__detail .post__profile-box {
+  padding: 10px 0;
+}
+
+.post__detail .post__text {
+  padding: 20px 0;
+}
+
+/* profile */
+.profile__box {
+  display: flex;
+  gap: 18px;
+  align-items: center;
+  font-size: 18px;
+  margin: 0 auto;
+  max-width: 680px;
+  /* 680px으로 맞춤 */
+  text-align: left;
+  line-height: 24px;
+  justify-content: space-between;
+  /* justify between은 역시 균형이다 */
+  padding: 20px;
+}
+
+.profile__box-lg {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.profile__image {
+  background-color: #f2f2f2;
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+}
+
+.profile__email {
+  font-weight: 600;
+}
+
+.profile__name {
+  font-size: 16px;
+  padding-top: 4px;
+}
+
+.profile__logout {
+  color: gray;
+  font-size: 14px;
+}
+
+.profile__logout:focus, .profile__logout:hover{
+  color: black;
 }
