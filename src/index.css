@@ -11,3 +11,56 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+/* header */
+header {
+  display: flex;
+  flex-direction: row-reverse;
+  border-bottom: 1px solid #f2f2f2;
+  min-height: 40px; 
+  /* 
+    min-height를 주네? 
+    padding을 줘서 여백 맞추기가 최고여
+    패딩 준다음에 높이가 부족하걸랑 min height를 주자
+    왜냐하면 padding을 줘도 높이가 상승한다
+  */
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 40px;
+}
+
+header a {
+  margin: 0 10px;
+  text-decoration: none;
+  color: gray;
+}
+
+header a:hover,
+header a:focus{
+  color:black;
+}
+
+/* footer */
+footer {
+  display: flex;
+  gap: 20px;
+  background-color: #f2f2f2;
+  min-height: 40px;
+  /* min height를 줘도 padding을 줘도 백그라운드 컬러의 여백이 증가하네 */
+  justify-content: center;
+  align-items: center;
+  padding: 20px 40px;
+  font-size: 14px;
+}
+
+/* post list */
+.post-list {
+  min-height: 90vh;
+  /* 
+    view port 90%를 주는 구나... 
+    내용도 마찬가지로 우선 패딩을 줘서 한줄이 꽉차 있을 경우까지 생각한다음에
+    text-center
+  */
+  padding: 20px 40px;
+  text-align: center;
+}
