@@ -53,14 +53,103 @@ footer {
   font-size: 14px;
 }
 
+footer a {
+  text-decoration: none;
+  color: gray;
+}
+
+footer a:hover,
+footer a:focus{
+  color:black;
+}
+
+/* post-navigation */
+.post__navagiation {
+  display: flex;
+  gap: 12px;
+  max-width: 680px;
+  margin: 0 auto;
+  /* 여기서 margin 0 auto는 max-width값을 설정해줬을 때 그 박스 크기안에 가운데정렬이 작동되었다 */
+  font-size: 16px;
+  color: gray;
+  cursor: pointer;
+  padding: 40px 20px 0 20px;
+}
+
+.post__navagiation--active {
+  font-weight: 800;
+  color: black;
+}
+
 /* post list */
-.post-list {
+.post__list {
   min-height: 90vh;
   /* 
     view port 90%를 주는 구나... 
     내용도 마찬가지로 우선 패딩을 줘서 한줄이 꽉차 있을 경우까지 생각한다음에
     text-center
+    max-width값을 680px을 줬네...  항상 max를 보면 반응형을 생각하자
   */
-  padding: 20px 40px;
-  text-align: center;
+  padding: 20px;
+  max-width: 680px;
+  margin: 0 auto;
+  line-height: 24px;
+}
+
+.post__box {
+  padding-top: 24px;
+  padding-bottom: 24px;
+  border-top: 1px solid #f2f2f2;
+}
+
+.post__profile-box {
+  display: flex;
+  gap: 8px;
+  font-size: 14px;
+  align-items: center;
+}
+
+.post__profile {
+  width: 36px;
+  height: 36px;
+  background-color: #f2f2f2;
+  border-radius: 100%;
+}
+
+.post__author-name, .post__date {
+  color: gray;
+}
+
+.post__title{
+  font-size: 20px;
+  font-weight: 500;
+  margin:  14px 0px;
+}
+
+.post__text {
+  color: dimgray;
+  font-size: 16px;
+}
+
+.post__list a {
+  text-decoration: none;
+  color: black;
+}
+
+.post__utils-box {
+  display: flex;
+  gap: 8px;
+  font-size: 14px;
+  flex-direction: row-reverse;
+  color: gray;
+}
+
+.post__delete:hover,
+.post__delete:focus{
+  color:black;
+}
+
+.post__edit:hover,
+.post__edit:focus{
+  color:black;
 }
