@@ -1,5 +1,7 @@
 {
   "compilerOptions": {
+    "baseUrl": "src",
+    // "baseUrl": "." 이것은 기본값
     "target": "es5",
     "lib": [
       "dom",
@@ -22,5 +24,10 @@
   },
   "include": [
     "src"
-  ]
+  ],
+  "paths":{
+    "pages/*":["pages/*"],
+    // "@pages/*":["pages/*"]  이렇게 할수도 있다,
+    "components/*":["components/*"]
+  }
 }
