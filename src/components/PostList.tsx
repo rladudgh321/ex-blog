@@ -1,15 +1,20 @@
+import { useState } from 'react';
 import { Link } from 'react-router-dom';
 
 interface PostListProps {
   hasNavigation?: boolean;
 }
 
+type TapType = "all" | "my"
+
 export default function PostList({hasNavigation = true}: PostListProps) {
+  const [activeTap, setActiveTap] = useState<TapType>('all');
   return (
     <>
+    {/* div를 button처럼 사용하고 싶으면 role presentation */}
       { hasNavigation && <div className="post__navagiation">
-        <div className='post__navagiation--active'>전체글</div>
-        <div>나의글</div>
+        <div role='presentation' onClick={() => setActiveTap('all')} className={ activeTap === 'all' ? 'post__navagiation--active' : ""}>전체글</div>
+        <div role='presentation' onClick={() => setActiveTap('my')} className={ activeTap === 'my' ? 'post__navagiation--active' : ""}>나의글</div>
       </div>}
       <div className="post__list">
         {/* 더미데이터를 이런식으로 [...Array(10)] .map(()) 으로 할 수도 있구나 */}

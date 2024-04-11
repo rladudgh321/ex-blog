@@ -1,3 +1,9 @@
+* {
+  margin: 0;
+  padding:0;
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -149,14 +155,24 @@ footer a:focus{
   color: gray;
 }
 
+.post__delete{
+  cursor: pointer;
+}
+
 .post__delete:hover,
 .post__delete:focus{
   color:black;
+  cursor: pointer;
 }
 
-.post__edit:hover,
-.post__edit:focus{
+.post__edit a {
+  text-decoration: none;
+}
+
+.post__edit a:hover,
+.post__edit a:focus{
   color:black;
+  font-weight: 500;
 }
 
 /* post detail */
@@ -295,3 +311,59 @@ footer a:focus{
   text-align: center;
   margin: 10px;
 }
+
+/* form */
+.form {
+  max-width: 680px;
+  margin: 0 auto;
+  margin-top: 20px;
+}
+
+.form .form__block {
+  width: 100%;
+}
+
+.form .form__block label {
+  display: block;
+  font-size: 24px;
+  font-weight: 500;
+  margin-top: 20px;
+}
+
+.form .form__block input {
+  width: 100%;
+  height: 100%;
+  margin-top: 10px;
+  padding: 20px;
+  font-size: 18px;
+}
+
+.form .form__block textarea {
+  width: 100%;
+  height: 200px;
+  margin-top: 10px;
+  padding: 20px;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.form__btn {
+  width: 100%;
+  height: 100%;
+  margin-top: 16px;
+}
+
+.form__btn input {
+  background: blue;
+  color: white;
+  font-size: 20px;
+  border-radius: 10px;
+  height: 80px;
+}
+
+.form__btn input:hover,
+.form__btn input:focus {
+  background: rgb(62, 62, 233);
+}
+
+
